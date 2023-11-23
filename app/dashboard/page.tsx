@@ -21,7 +21,7 @@ export default function Page() {
     },
   ];
 
-  console.log(faaliyetler);
+
   return (
     <div>
       <div>

@@ -20,7 +20,7 @@ export default function Page({ params }: { params: { slug: string } }) {
   ];
 
   const faaliyetDetay = faaliyetler.find((item) => item.url === params.slug);
-  console.log(faaliyetDetay);
+
   return (
     <div>
       <h1>Faaliyet Detayı</h1>
