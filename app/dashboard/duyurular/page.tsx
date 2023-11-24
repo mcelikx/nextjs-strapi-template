@@ -1,5 +1,7 @@
-
 import Duyurular from "@/app/components/duyurular";
+import Image from "next/image";
+import Link from "next/link";
+
 
 export default async function Page() {
 
@@ -8,7 +10,7 @@ export default async function Page() {
     <div className="my-12">
       <h1>Duyuru Listesi</h1>
       <h2>Duyurular burada listelenmektedir</h2>
-      <Duyurular/>
+      <Duyurular isColumnView={true} isAdmin={true}/>
     </div>
   );
 }
