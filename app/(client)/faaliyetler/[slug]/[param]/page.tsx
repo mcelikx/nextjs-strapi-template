@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-async function getData(slug) {
+async function getData(param) {
   const res = await fetch(
-    `http://10.200.61.11:1337/api/activities/${slug}?populate=*`
+    `http://10.200.61.11:1337/api/activities/${param}?populate=*`
   );
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
@@ -15,8 +15,8 @@ async function getData(slug) {
   return res.json();
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const data = await getData(params.slug);
+export default async function Page({ params }: { params: { param: string } }) {
+  const data = await getData(params.param);
 
   const imageUrl =
     data?.data?.attributes.image?.data?.length > 0
@@ -25,22 +25,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <div>
-      <h1>Faaliyet Detayı</h1>
+      <h1>Faaliyet Detayının  detayı</h1>
       <h2>Faaliyet title: {data?.data?.attributes.title}</h2>
       <h2>Faaliyet description: {data?.data?.attributes.short_description}</h2>
-
-      <Link
-        className="cursor-pointer hover:scale-105 transition-all "
-        href={`/faaliyetler/${params.slug}/${params.slug}`}
-      >
-        <Image
-          className="w-96 h-96 object-cover position-center"
-          alt={""}
-          width={500}
-          height={400}
-          src={imageUrl}
-        />
-      </Link>
+      <Image
+        className="w-96 h-96 object-cover position-center"
+        alt={data?.data?.attributes.title}
+        width={500}
+        height={400}
+        src={imageUrl}
+      />
     </div>
   );
 }

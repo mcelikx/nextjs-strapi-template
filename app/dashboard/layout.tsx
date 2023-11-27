@@ -21,20 +21,14 @@ export default function RootLayout({
         <nav className="flex flex-col gap-2 bg-blue-200 h-screen">
           <Link
             className="hover:bg-red-200 hover:text-white"
-            href="dashboard/faaliyetler"
+            href="/dashboard/faaliyetler"
           >
             Faaliyetler
           </Link>
-          <Link
-            className="hover:bg-red-200 hover:text-white"
-            href="dashboard/duyurular"
-          >
+          <Link className="hover:bg-red-200 hover:text-white" href="/dashboard/duyurular">
             Duyurular
           </Link>
-          <Link
-            className="hover:bg-red-200 hover:text-white"
-            href="dashboard/hakkimizda"
-          >
+          <Link className="hover:bg-red-200 hover:text-white" href="/dashboard/hakkimizda">
             Hakkımızda
           </Link>
         </nav>

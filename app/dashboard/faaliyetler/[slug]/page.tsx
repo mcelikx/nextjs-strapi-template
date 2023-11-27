@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 async function getData(slug) {
   const res = await fetch(
     `http://10.200.61.11:1337/api/activities/${slug}?populate=*`
@@ -28,19 +27,13 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <h1>Faaliyet Detayı</h1>
       <h2>Faaliyet title: {data?.data?.attributes.title}</h2>
       <h2>Faaliyet description: {data?.data?.attributes.short_description}</h2>
-
-      <Link
-        className="cursor-pointer hover:scale-105 transition-all "
-        href={`/faaliyetler/${params.slug}/${params.slug}`}
-      >
-        <Image
-          className="w-96 h-96 object-cover position-center"
-          alt={""}
-          width={500}
-          height={400}
-          src={imageUrl}
-        />
-      </Link>
+      <Image
+        className="w-96 h-96 object-cover position-center"
+        alt={data?.data?.attributes.title}
+        width={500}
+        height={400}
+        src={imageUrl}
+      />
     </div>
   );
 }
