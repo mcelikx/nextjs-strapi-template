@@ -1,4 +1,3 @@
-import { revalidatePath, revalidateTag } from "next/cache";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,7 +17,6 @@ async function getData() {
     throw new Error("Failed to fetch data");
   }
 
-  revalidateTag("announcements");
   return res.json();
 }
 
@@ -42,7 +40,6 @@ async function removeAnnouncement(id) {
   }
   console.log("request done");
 
-  revalidateTag("announcements");
   return res.json();
 }
 
