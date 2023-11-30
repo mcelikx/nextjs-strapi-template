@@ -1,10 +1,32 @@
-.root {
-  @apply grid grid-cols-[200px_1fr] h-full;
+.header {
+  display: flex;
+  justify-content: space-between;
+  @apply bg-primary text-white;
+}
+
+.page {
+  @apply grid grid-cols-[200px_1fr] h-auto;
+}
+.content {
+  display: flex;
 }
 .nav {
-  @apply flex flex-col gap-2 bg-blue-200 h-screen;
+  @apply flex flex-col gap-2 bg-secondary h-screen fixed lg:relative  pl-2 pr-10;
 }
 
 .link {
   @apply hover:bg-blue-500 hover:text-white;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+.show {
+  display: flex;
+}
+.hiddenNav {
+  @apply hidden;
 }
