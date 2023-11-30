@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
-
+import styles from "./styles.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="grid grid-cols-[200px_1fr] h-full">
+      <body className={styles.root}>
         <nav className="flex flex-col gap-2 bg-blue-200 h-screen">
           <Link
             className="hover:bg-red-200 hover:text-white"
@@ -25,10 +25,16 @@ export default function RootLayout({
           >
             Faaliyetler
           </Link>
-          <Link className="hover:bg-red-200 hover:text-white" href="/dashboard/duyurular">
+          <Link
+            className="hover:bg-red-200 hover:text-white"
+            href="/dashboard/duyurular"
+          >
             Duyurular
           </Link>
-          <Link className="hover:bg-red-200 hover:text-white" href="/dashboard/hakkimizda">
+          <Link
+            className="hover:bg-red-200 hover:text-white"
+            href="/dashboard/hakkimizda"
+          >
             Hakkımızda
           </Link>
         </nav>

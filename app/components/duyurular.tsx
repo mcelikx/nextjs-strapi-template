@@ -62,10 +62,9 @@ const Duyurular = async ({ isAdmin, isColumnView }: Props) => {
             : "";
 
         return (
-          <div>
+          <div key={index}>
             <Link
               className="cursor-pointer hover:scale-105 transition-all "
-              key={index}
               href={`duyurular/${duyuru.id}`}
             >
               <Image
@@ -80,7 +79,7 @@ const Duyurular = async ({ isAdmin, isColumnView }: Props) => {
             {isAdmin ? (
               <Link href={`duyurular/${duyuru.id}`}>Düzenle</Link>
             ) : null}
-            <button onClick={() => removeAnnouncement(duyuru.id)}>Sil</button>
+            <button>Sil</button>
           </div>
         );
       })}

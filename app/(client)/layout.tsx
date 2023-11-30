@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
-
+import styles from "./styles.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="bg-blue-300 flex gap-6 text-red-900 items-center justify-between h-20 px-10">
+        <div className={styles.header}>
           <div>
             <Link href="/">ANASAYFA</Link>
           </div>
