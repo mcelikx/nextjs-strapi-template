@@ -18,21 +18,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={styles.root}>
-        <nav className="flex flex-col gap-2 bg-blue-200 h-screen">
+        <nav className={styles.nav}>
           <Link
-            className="hover:bg-red-200 hover:text-white"
+            className={styles.link}
             href="/dashboard/faaliyetler"
           >
             Faaliyetler
           </Link>
           <Link
-            className="hover:bg-red-200 hover:text-white"
+            className={styles.link}
             href="/dashboard/duyurular"
           >
             Duyurular
           </Link>
           <Link
-            className="hover:bg-red-200 hover:text-white"
+            className={styles.link}
             href="/dashboard/hakkimizda"
           >
             Hakkımızda
