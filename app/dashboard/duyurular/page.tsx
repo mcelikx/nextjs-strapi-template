@@ -4,7 +4,7 @@ import Duyurular from "@/app/components/duyurular";
 import Image from "next/image";
 import Link from "next/link";
 
-export default async function Page() {
+export default function Page() {
   return (
     <div className="my-12">
       <DuyuruEkle />

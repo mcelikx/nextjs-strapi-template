@@ -29,10 +29,9 @@ const Faaliyet = async ({ isAdmin, isColumnView }: Props) => {
             : "";
 
         return (
-          <div>
+          <div key={index}>
             <Link
               className="cursor-pointer hover:scale-105 transition-all "
-              key={index}
               href={`faaliyetler/${faaliyet.id}`}
             >
               <Image
