@@ -1,0 +1,19 @@
+.root {
+}
+.logo {
+  @apply w-32 flex items-center p-2;
+}
+
+.menu {
+}
+
+.navbar {
+  @apply w-full border-b border-gray-100 bg-white/80 backdrop-blur dark:border-gray-700/30 dark:bg-primary;
+}
+
+.hamburger {
+  @apply relative -mr-6 p-6 lg:hidden;
+}
+.header {
+  @apply flex items-center justify-between w-full overflow-x-scroll;
+}

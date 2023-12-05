@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import Header from "../components/Header/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,8 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className="dark" lang="en">
       <body className={inter.className}>
+        <Header />
         <div className={styles.header}>
           <div>
             <Link href="/">ANASAYFA</Link>
