@@ -53,6 +53,7 @@ const config: Config = {
           900: "#920a0a",
           950: "#500000",
         },
+        transparent: "rgb(17 24 39 / 0.8)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
