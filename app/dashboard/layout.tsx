@@ -19,7 +19,6 @@ export default function RootLayout({
     setIsOpen(!isOpen);
   };
 
-  console.log(isOpen);
   return (
     <html lang="en">
       <body className={styles.root}>

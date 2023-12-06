@@ -4,7 +4,6 @@ import { useFormik } from "formik";
 import { revalidatePath } from "next/cache";
 
 async function sendData({ params }) {
-  console.log("request oncesi");
   const res = await fetch("http://10.200.61.11:1337/api/announcements", {
     method: "POST",
     headers: {
@@ -20,7 +19,7 @@ async function sendData({ params }) {
       },
     }),
   });
-  console.log("request sonrasi");
+
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -28,7 +27,6 @@ async function sendData({ params }) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error("Failed to fetch data");
   }
-  console.log("request done");
 
   revalidatePath("/dashboard/duyurular");
 
