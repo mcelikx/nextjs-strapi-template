@@ -31,25 +31,28 @@ export default function RootLayout({
         </div> */}
         {children}
 
-        <footer className="bg-blue-800 text-white p-4">
-          <div className="container mx-auto text-center">
-            <p className="text-sm">
-              &copy; 2023 Your Website. All rights reserved.
-            </p>
+        <footer className="bg-blue-800 text-white">
+          <div className="mx-auto text-center">
+            <p className="text-sm">2023 Your Website. All rights reserved.</p>
             {/* Navigation links */}
-            <nav className="mt-2">
-              <Link href="/hakkimizda">
-                <p className="text-gray-300 hover:text-white mx-2">
-                  Hakkımızda
-                </p>
+            <nav className="mt-2 flex flex-col mx-auto">
+              <Link
+                className="text-gray-300 hover:text-white mx-auto"
+                href="/hakkimizda"
+              >
+                Hakkımızda
               </Link>
-              <Link href="/faaliyetler">
-                <p className="text-gray-300 hover:text-white mx-2">
-                  Faaliyetler
-                </p>
+              <Link
+                className="text-gray-300 hover:text-white mx-auto"
+                href="/faaliyetler"
+              >
+                Faaliyetler
               </Link>
-              <Link href="/duyurular">
-                <p className="text-gray-300 hover:text-white mx-2">Duyurular</p>
+              <Link
+                className="text-gray-300 hover:text-white mx-auto"
+                href="/duyurular"
+              >
+                Duyurular
               </Link>
             </nav>
           </div>

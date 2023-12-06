@@ -64,6 +64,7 @@ const Header = ({ items }: Props) => {
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
+                    onClick={() => setHamburgerActive(false)}
                     href={item.url}
                     className="block transition hover:text-primary dark:hover:text-primaryLight md:px-4"
                   >

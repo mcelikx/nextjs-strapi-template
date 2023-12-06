@@ -1,6 +1,0 @@
-.body {
-  @apply bg-white;
-}
-.header {
-  @apply bg-blue-500 flex gap-6 text-primary items-center justify-between h-20 px-10;
-}
