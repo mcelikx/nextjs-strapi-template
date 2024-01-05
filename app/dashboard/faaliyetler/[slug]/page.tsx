@@ -1,5 +1,5 @@
 import Image from "next/image";
-async function getData(slug) {
+async function getData(slug: string) {
   const res = await fetch(
     `http://10.200.61.11:1337/api/activities/${slug}?populate=*`
   );

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-async function getData(param) {
+async function getData(param: string) {
   const res = await fetch(
     `http://10.200.61.11:1337/api/activities/${param}?populate=*`
   );
@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: { param: string } }) {
 
   return (
     <div>
-      <h1>Faaliyet Detayının  detayı</h1>
+      <h1>Faaliyet Detayının detayı</h1>
       <h2>Faaliyet title: {data?.data?.attributes.title}</h2>
       <h2>Faaliyet description: {data?.data?.attributes.short_description}</h2>
       <Image

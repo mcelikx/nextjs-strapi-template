@@ -22,7 +22,7 @@ const Faaliyet = async ({ isAdmin, isColumnView }: Props) => {
   const data = await getData();
   return (
     <div className={isColumnView ? "flex flex-col gap-2" : "flex gap-10"}>
-      {data?.data?.map((faaliyet, index) => {
+      {data?.data?.map((faaliyet: any, index: number) => {
         const imageUrl =
           faaliyet.attributes.image.data?.length > 0
             ? `http://10.200.61.11:1337${faaliyet.attributes.image.data[0].attributes.url}`

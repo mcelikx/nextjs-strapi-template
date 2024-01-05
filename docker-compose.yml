@@ -1,0 +1,27 @@
+version: 0.0.1
+
+services:
+  # strapi:
+  #   image: strapi/strapi
+  #   restart: always
+  #   ports:
+  #     - 1337:1337
+  #   environment:
+  #     DATABASE_CLIENT: postgres
+  #     DATABASE_HOST: db
+  #     DATABASE_PORT: 5432
+  #     DATABASE_NAME: strapi
+  #     DATABASE_USERNAME: strapi
+  #     DATABASE_PASSWORD: strapi
+  #   volumes:
+  #     - ./app:/srv/app
+  #   depends_on:
+  #     - db
+  web-app:
+    # image: btk-dernek-web-prod
+    image: btk-dernek-web-app-dev
+    restart: always
+    ports:
+      - 3000:3000
+    # depends_on:
+    #   - strapi

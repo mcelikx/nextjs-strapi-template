@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useFormik } from "formik";
 import { revalidatePath } from "next/cache";
 
-async function sendData({ params }) {
+async function sendData({ params }: { params: any }) {
   const res = await fetch("http://10.200.61.11:1337/api/announcements", {
     method: "POST",
     headers: {

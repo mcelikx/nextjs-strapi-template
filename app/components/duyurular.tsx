@@ -20,7 +20,7 @@ async function getData() {
   return res.json();
 }
 
-async function removeAnnouncement(id) {
+async function removeAnnouncement(id: string) {
   const res = await fetch(`http://10.200.61.11:1337/api/announcements/${id}`, {
     method: "DELETE",
     headers: {
@@ -53,7 +53,7 @@ const Duyurular = async ({ isAdmin, isColumnView }: Props) => {
         isColumnView ? "flex flex-col gap-2 " : "flex gap-10 flex-wrap"
       }
     >
-      {data?.data?.map((duyuru, index) => {
+      {data?.data?.map((duyuru: any, index: number) => {
         const imageUrl =
           duyuru.attributes.image.data?.length > 0
             ? `http://10.200.61.11:1337${duyuru.attributes.image.data[0].attributes.url}`

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import classes from "./header.module.css";
-import Logo from "app/assets/logo";
+import Logo from "../../assets/Logo";
 import ThemeButton from "./themeButton";
 type Props = {
   items?: any[];
